@@ -4,28 +4,57 @@
   <style>
     body,
     html {
-      background-color: #221;
+      background-color: #111;
       color: #bbb;
       font-family: sans-serif;
     }
-    content {
+
+    .container {
       display: block;
       margin-left: auto;
       margin-right: auto;
       width: 80%;
+      border-radius: 25px;
+      background-color: #222;
+      padding: 2em;
     }
+
     .page-body {
       padding: 0.5em 1em 0.5em 1em;
     }
+
     a,
     h1 {
       color: deepskyblue;
+    }
+
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    ul.project-list > li > a {
+      display: list-item;
+      list-style-type: '📃';
+      padding-inline-start: 0.5 ch;
+    }
+
+    h1 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .footer {
+      margin-top: 2em;
+    }
+    .caption {
+      font-size: 0.5rem;
     }
   </style>
 </head>
 
   <body>
-    <content>
+    <div class="container">
       <h1>My second project</h1>
       <h3>Project 2</h3>
       <p><i>February 9, 2022</i></p>
@@ -40,11 +69,13 @@
       <div class="page-body"><p>Project 2</p>
 </div>
       <hr />
-      <caption>
-        See
-        <a href="index.html">HOME</a>
-        for a listing of 2 pages
-      </caption>
-    </content>
+      <div class="footer">
+        <p>
+          Visit
+          <a href="index.html">HOME</a>
+          for a listing of 2 pages
+        </p>
+      </div>
+    </div>
   </body>
 </html>

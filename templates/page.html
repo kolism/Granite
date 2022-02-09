@@ -1,7 +1,7 @@
 <html>
   <%- include(head, {title: page.title}) %>
   <body>
-    <content>
+    <div class="container">
       <h1><%= page.title %></h1>
       <h3><%= page.description %></h3>
       <p><i><%= page.date %></i></p>
@@ -13,11 +13,13 @@
       <hr />
       <div class="page-body"><%- page.body %></div>
       <hr />
-      <caption>
-        See
-        <a href="index.html">HOME</a>
-        for a listing of <%= pages.length.toString() %> pages
-      </caption>
-    </content>
+      <div class="footer">
+        <p>
+          Visit
+          <a href="index.html">HOME</a>
+          for a listing of <%= pages.length.toString() %> pages
+        </p>
+      </div>
+    </div>
   </body>
 </html>

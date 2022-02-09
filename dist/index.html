@@ -4,34 +4,63 @@
   <style>
     body,
     html {
-      background-color: #221;
+      background-color: #111;
       color: #bbb;
       font-family: sans-serif;
     }
-    content {
+
+    .container {
       display: block;
       margin-left: auto;
       margin-right: auto;
       width: 80%;
+      border-radius: 25px;
+      background-color: #222;
+      padding: 2em;
     }
+
     .page-body {
       padding: 0.5em 1em 0.5em 1em;
     }
+
     a,
     h1 {
       color: deepskyblue;
+    }
+
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    ul.project-list > li > a {
+      display: list-item;
+      list-style-type: '📃';
+      padding-inline-start: 0.5 ch;
+    }
+
+    h1 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .footer {
+      margin-top: 2em;
+    }
+    .caption {
+      font-size: 0.5rem;
     }
   </style>
 </head>
 
   <body>
-    <content>
+    <div class="container">
       <h1>My Home Page</h1>
-      <h3>Check out my project below!</h3>
+      <h3>Checkout my projects below! I will be updating this daily!</h3>
 
       <div class="page-body">
-        <h5>List of site pages:</h5>
-        <ul>
+        <h4>List of project pages:</h4>
+        <ul class="project-list">
           
 
           <li><a href="project1.html">My first project</a></li>
@@ -41,6 +70,8 @@
           
         </ul>
       </div>
-    </content>
+
+      <div class="caption footer">Page generated on 2/9/2022, 2:53:16 AM</div>
+    </div>
   </body>
 </html>

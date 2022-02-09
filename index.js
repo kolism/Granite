@@ -79,6 +79,7 @@ const Granite = async (config) => {
       description: config?.index?.description ?? 'Check out my project below!',
       head: headTemplatePath,
       pages,
+      date: new Date().toLocaleString(),
     })
   )
 

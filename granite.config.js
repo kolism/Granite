@@ -5,6 +5,6 @@ module.exports = {
   dist: 'dist',
   index: {
     title: 'My Home Page',
-    content: 'Checkout my projects below! I will be updating this daily!',
+    description: 'Checkout my projects below! I will be updating this daily!',
   },
 }
