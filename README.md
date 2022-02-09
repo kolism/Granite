@@ -70,7 +70,7 @@ Example: "granite.config.js"
     description "" // string: descriptor
     config:{},
     pages:[],
-    head:"" // string: header template for runtime consumption
+    head:"" // string: path to header template for runtime consumption
   }
   ```
 
@@ -117,7 +117,7 @@ Example: "granite.config.js"
       +fileData:{}
 
     },
-    head:"" // string: to header template for runtime consumption
+    head:"" // string: path to header template for runtime consumption
   }
   ```
 
