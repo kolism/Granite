@@ -2,8 +2,8 @@
  Mini static site generator in Node
 
 ## How to use this?
-  1) Populate your granite.config.js file.
-  Example: "granite.config.js"
+1) Populate your granite.config.js file.
+Example: "granite.config.js"
 
   ```js
   module.exports = {
@@ -19,18 +19,12 @@
   ```
 
 
-  2) #### Setup your templates
+2) #### Setup your templates
 
   Currently, there are 3 files to configure: 
 
 
-    1) head.html: 
-    (
-    ```html
-    <header>
-    ``` 
-    tag configuration)
-    Example: "head.html"
+  1) head.html: (for header tag configuration)
 
     ```html
     <head>
@@ -39,8 +33,8 @@
     ```
 
 
-    2) index.html: main page content
-    Example: "index.html"
+  2) index.html: main page content
+  Example: "index.html"
 
 
     ```html
@@ -76,8 +70,8 @@
     head:"" // string: header template for runtime consumption
     ```
 
-    3) page.html: template for markdown pages
-    Example: "page.html"
+  3) page.html: template for markdown pages
+  Example: "page.html"
 
 
     ```html
@@ -106,8 +100,7 @@
     </html>
     ```
     
-    This page.html template has access to:
-
+  This "page.html" template has access to:
 
     ```js
     config:{},
@@ -124,7 +117,7 @@
 
 
   3) Setup your markdown
-    Example PAGE markdown:
+  Example page markdown:
 
 
     ```md
