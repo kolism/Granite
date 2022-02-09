@@ -28,7 +28,7 @@ Example: "granite.config.js"
 
     ```html
     <head>
-      <title><%= title %></title>
+    <title><%= title %></title>
     </head>
     ```
 
@@ -39,35 +39,35 @@ Example: "granite.config.js"
 
     ```html
     <html>
-      <%- include(head, {title: title}) %>
-      <body>
-        <content>
-          <h1><%= title %></h1>
-          <h3><%= description %></h3>
-
-          <div class="page-body">
-            <h5>List of site pages:</h5>
-            <ul>
-              <% pages.forEach(page => { %>
-
-              <li><a href="<%= page.fileHtmlName %>"><%= page.title %></a></li>
-              <% }); %>
-            </ul>
-          </div>
-        </content>
-      </body>
+    <%- include(head, {title: title}) %>
+    <body>
+    <content>
+    <h1><%= title %></h1>
+    <h3><%= description %></h3>
+    <div class="page-body">
+    <h5>List of site pages:</h5>
+    <ul>
+    <% pages.forEach(page => { %>
+    <li><a href="<%= page.fileHtmlName %>"><%= page.title %></a></li>
+    <% }); %>
+    </ul>
+    </div>
+    </content>
+    </body>
     </html>
     ```
 
-    This index.html template has access to:
+  This index.html template has access to:
 
 
     ```js
-    title: "" // string: page h1 and/or header title
-    description "" // string: descriptor
-    config:{},
-    pages:[],
-    head:"" // string: header template for runtime consumption
+    {
+      title: "" // string: page h1 and/or header title
+      description "" // string: descriptor
+      config:{},
+      pages:[],
+      head:"" // string: header template for runtime consumption
+    }
     ```
 
   3) page.html: template for markdown pages
@@ -103,16 +103,18 @@ Example: "granite.config.js"
   This "page.html" template has access to:
 
     ```js
-    config:{},
-    pages:[],
-    page:{
-      fileHtmlName: "",
-      fileBaseName: "",
-      body: "",
-      +fileData:{}
+    {
+      config:{},
+      pages:[],
+      page:{
+        fileHtmlName: "",
+        fileBaseName: "",
+        body: "",
+        +fileData:{}
 
-    },
-    head:"" // string: to header template for runtime consumption
+      },
+      head:"" // string: to header template for runtime consumption
+    }
     ```
 
 
