@@ -1,0 +1,19 @@
+<html>
+  <%- include(head, {title: title}) %>
+  <body>
+    <content>
+      <h1><%= title %></h1>
+      <h3><%= description %></h3>
+
+      <div class="page-body">
+        <h5>List of site pages:</h5>
+        <ul>
+          <% pages.forEach(page => { %>
+
+          <li><a href="<%= page.fileHtmlName %>"><%= page.title %></a></li>
+          <% }); %>
+        </ul>
+      </div>
+    </content>
+  </body>
+</html>
