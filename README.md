@@ -6,7 +6,7 @@
   Example: "granite.config.js"
 
   ```js
-    module.exports = {
+  module.exports = {
     root: null,
     template: 'templates',
     pages: 'pages',
@@ -14,18 +14,22 @@
     index: {
       title: 'My Home Page',
       content: 'Checkout my projects below! I will be updating this daily!',
-    },
+    }
   }
   ```
 
 
-  2) Setup your templates:
+  2) #### Setup your templates
+
   Currently, there are 3 files to configure: 
 
 
-    1) head.html: (```html
+    1) head.html: 
+    (
+    ```html
     <header>
-    ``` tag configuration)
+    ``` 
+    tag configuration)
     Example: "head.html"
 
     ```html
@@ -142,7 +146,7 @@
 
   4) Run granite 
 
-  
+
   ```sh
   npm run build
   ```
