@@ -1,8 +1,13 @@
-# Granite
- Mini static site generator in Node
+# 🗻Granite
+ 4kb Mini static site generator in Node.
+ 
+ Deploy to vercel easily!
+
+
+  ##### Demo of what is generated with this repo: https://granite.vercel.app/
 
 ## How to use this?
-1) Populate your granite.config.js file.
+1) #### Populate your granite.config.js file.
 Example: "granite.config.js"
 
   ```js
@@ -26,120 +31,120 @@ Example: "granite.config.js"
 
   1) head.html: (for header tag configuration)
 
-    ```html
-    <head>
-    <title><%= title %></title>
-    </head>
-    ```
+  ```html
+  <head>
+  <title><%= title %></title>
+  </head>
+  ```
 
 
   2) index.html: main page content
   Example: "index.html"
 
 
-    ```html
-    <html>
-    <%- include(head, {title: title}) %>
-    <body>
-    <content>
-    <h1><%= title %></h1>
-    <h3><%= description %></h3>
-    <div class="page-body">
-    <h5>List of site pages:</h5>
-    <ul>
-    <% pages.forEach(page => { %>
-    <li><a href="<%= page.fileHtmlName %>"><%= page.title %></a></li>
-    <% }); %>
-    </ul>
-    </div>
-    </content>
-    </body>
-    </html>
-    ```
+  ```html
+  <html>
+  <%- include(head, {title: title}) %>
+  <body>
+  <content>
+  <h1><%= title %></h1>
+  <h3><%= description %></h3>
+  <div class="page-body">
+  <h5>List of site pages:</h5>
+  <ul>
+  <% pages.forEach(page => { %>
+  <li><a href="<%= page.fileHtmlName %>"><%= page.title %></a></li>
+  <% }); %>
+  </ul>
+  </div>
+  </content>
+  </body>
+  </html>
+  ```
 
   This index.html template has access to:
 
 
-    ```js
-    {
-      title: "" // string: page h1 and/or header title
-      description "" // string: descriptor
-      config:{},
-      pages:[],
-      head:"" // string: header template for runtime consumption
-    }
-    ```
+  ```js
+  {
+    title: "" // string: page h1 and/or header title
+    description "" // string: descriptor
+    config:{},
+    pages:[],
+    head:"" // string: header template for runtime consumption
+  }
+  ```
 
   3) page.html: template for markdown pages
   Example: "page.html"
 
 
-    ```html
-    <html>
-      <%- include(head, {title: page.title}) %>
-      <body>
-        <content>
-          <h1><%= page.title %></h1>
-          <h3><%= page.description %></h3>
-          <p><i><%= page.date %></i></p>
-          <p>
-            <strong>Tags:</strong> <% page.tags.forEach(tag => { %>
-            <u>#<%- tag %></u>
-            <% }); %>
-          </p>
-          <hr />
-          <div class="page-body"><%- page.body %></div>
-          <hr />
-          <caption>
-            See
-            <a href="index.html">HOME</a>
-            for a listing of <%= pages.length.toString() %> pages
-          </caption>
-        </content>
-      </body>
-    </html>
-    ```
+  ```html
+  <html>
+  <%- include(head, {title: page.title}) %>
+  <body>
+  <content>
+  <h1><%= page.title %></h1>
+  <h3><%= page.description %></h3>
+  <p><i><%= page.date %></i></p>
+  <p>
+  <strong>Tags:</strong> <% page.tags.forEach(tag => { %>
+  <u>#<%- tag %></u>
+  <% }); %>
+  </p>
+  <hr />
+  <div class="page-body"><%- page.body %></div>
+  <hr />
+  <caption>
+  See
+  <a href="index.html">HOME</a>
+  for a listing of <%= pages.length.toString() %> pages
+  </caption>
+  </content>
+  </body>
+  </html>
+  ```
     
-  This "page.html" template has access to:
+  This page.html template has access to:
 
-    ```js
-    {
-      config:{},
-      pages:[],
-      page:{
-        fileHtmlName: "",
-        fileBaseName: "",
-        body: "",
-        +fileData:{}
+  ```js
+  {
+    config:{},
+    pages:[],
+    page:{
+      fileHtmlName: "",
+      fileBaseName: "",
+      body: "",
+      +fileData:{}
 
-      },
-      head:"" // string: to header template for runtime consumption
-    }
-    ```
+    },
+    head:"" // string: to header template for runtime consumption
+  }
+  ```
 
 
-  3) Setup your markdown
+  3) #### Setup your markdown
   Example page markdown:
 
 
-    ```md
-    ---
-    title: My first project
-    description: Project 1
-    tags: 
-      - projects
-      - tech
-    date: February 8, 2022
-    author:
-      name: Fred
-      url: https://localhost
-    ---
+  ```md
+  ---
+  title: My first project
+  description: Project 1
+  tags: 
+    - projects
+    - tech
+  date: February 8, 2022
+  author:
+    name: Fred
+    url: https://localhost
+  ---
 
-    This content is generated from Granite SSG
-    ```
+  This content is generated from Granite SSG
+  ```
 
 
-  4) Run granite 
+  4) #### Run granite 
 
 
   ```sh
