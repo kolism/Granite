@@ -10,4 +10,9 @@ author:
   url: https://localhost
 ---
 
+## Project Details
 This content is generated from Granite SSG
+---------------------------------
+|Col1|Col2|
+|----|----|
+|x1  |x2  |
