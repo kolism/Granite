@@ -1,8 +1,7 @@
-# 🗻Granite
+# 🗻Granite SSG
  4kb Mini static site generator in Node.
-
- Deploy to vercel easily!
-
+ 
+ ## Write content in markdown, display it how you like with templates, then deploy to your host!
 
   ##### Demo of what is generated with this repo: https://granite.vercel.app/
 
