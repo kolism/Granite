@@ -4,6 +4,7 @@
 ## How to use this?
   1) Populate your granite.config.js file.
   Example: "granite.config.js"
+
   ```js
     module.exports = {
     root: null,
@@ -17,18 +18,27 @@
   }
   ```
 
-  
+
   2) Setup your templates:
   Currently, there are 3 files to configure: 
-    1) head.html: (```<header>``` tag configuration)
+
+
+    1) head.html: (```html
+    <header>
+    ``` tag configuration)
     Example: "head.html"
+
     ```html
     <head>
       <title><%= title %></title>
     </head>
     ```
+
+
     2) index.html: main page content
     Example: "index.html"
+
+
     ```html
     <html>
       <%- include(head, {title: title}) %>
@@ -52,6 +62,8 @@
     ```
 
     This index.html template has access to:
+
+
     ```js
     title: "" // string: page h1 and/or header title
     description "" // string: descriptor
@@ -61,7 +73,9 @@
     ```
 
     3) page.html: template for markdown pages
-    Exmaple: "page.html"
+    Example: "page.html"
+
+
     ```html
     <html>
       <%- include(head, {title: page.title}) %>
@@ -89,16 +103,26 @@
     ```
     
     This page.html template has access to:
+
+
     ```js
     config:{},
     pages:[],
-    page:[],
+    page:{
+      fileHtmlName: "",
+      fileBaseName: "",
+      body: "",
+      +fileData:{}
+
+    },
     head:"" // string: to header template for runtime consumption
     ```
 
 
   3) Setup your markdown
     Example PAGE markdown:
+
+
     ```md
     ---
     title: My first project
@@ -117,6 +141,8 @@
 
 
   4) Run granite 
+
+  
   ```sh
   npm run build
   ```
