@@ -1,6 +1,6 @@
 # 🗻Granite
  4kb Mini static site generator in Node.
- 
+
  Deploy to vercel easily!
 
 
@@ -159,5 +159,6 @@ Example: "granite.config.js"
   - Add more nav bar / footer support
   - Search?
   - Link graphing?
+  - Add ordering/sorting when listing posts on index (optionally, the user could add this javascript to the index template)
 
 
