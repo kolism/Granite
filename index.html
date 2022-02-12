@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="dist/acssori.css" />
+    <style>
+      .palette-item {
+        margin-top: 32px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col center">
+          <a class="larger" href="https://github.com/kolism/acssori">Github</a>
+        </div>
+        <div class="col center">
+          <h1 class="text-light mt-base">
+            🎀A<i class="text-accent">CSS</i>ORI
+          </h1>
+        </div>
+        <div class="col center">
+          <a class="larger" href="#palette">Guide</a>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container" id="palette">
+      <div class="palette-item" id="buttons">
+        <h3 class="caps title">Buttons</h3>
+        <p>Buttons are available as native dom tags or through classes</p>
+        <h6 class="subtitle">Default Buttons</h6>
+        <div class="row">
+          <div class="col">
+            <button>Default Button</button>
+            <br />
+            <button class="primary">Primary Button</button>
+            <br />
+            <div class="button secondary">Secondary Button</div>
+          </div>
+          <div class="col">
+            <pre>
+              <code>&lt;button>Default Button&lt;/button><br>&lt;button class="primary">Primary Button&lt;/button><br>&lt;div class="button secondary">Secondary Button&lt;/div></code>
+            </pre>
+          </div>
+        </div>
+
+        <h6 class="subtitle">Outlined Buttons</h6>
+        <div class="row">
+          <div class="col">
+            <button class="outlined">Default Button</button>
+            <br />
+            <button class="primary outlined">Primary Button</button>
+            <br />
+            <div class="button secondary outlined">Secondary Button</div>
+          </div>
+
+          <div class="col">
+            <pre>
+              <code>&lt;button class="outlined">Default Button&lt;/button><br>&lt;button class="primary outlined">Primary Button&lt;/button><br>&lt;div class="button secondary outlined">Secondary Button&lt;/div></code>
+            </pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="palette-item" id="cards">
+        <h3 class="caps title">Cards</h3>
+        <p>Cards contain content and images</p>
+        <h6 class="subtitle">Content Cards</h6>
+        <div class="row">
+          <div class="col">
+            <div class="card center">
+              <div class="card-image">
+                <img
+                  src="https://source.unsplash.com/random/350x200"
+                  width="100%"
+                />
+              </div>
+              <div class="card-content">My Favourite Picture</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card center">
+              <div class="card-content">
+                <h3 class="text-primary">🎆BEST WEB FRAMEWORKS🎆</h3>
+              </div>
+              <div class="card-content"><button class="info">View</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <pre>
+              <code>&lt;div class="card center"><br>  &lt;div class="card-image"><br>    &lt;img<br>      src="https://source.unsplash.com/random/350x200" width="100%"/><br>  &lt;/div><br>  &lt;div class="card-content">My Favourite Picture&lt;/div><br>&lt;/div>
+                
+                
+&lt;div class="card center">
+  &lt;div class="card-content">
+    &lt;h3 class="text-primary">🎆BEST WEB FRAMEWORKS🎆&lt;/h3>
+  &lt;/div>
+  &lt;div class="card-content">&lt;button class="info">View&lt;/button>&lt;/div>
+&lt;/div>
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="palette-item" id="inputs">
+        <h3 class="caps title">Inputs</h3>
+        <p>Style your inputs: radios, input boxes, textareas</p>
+        <h6 class="subtitle">Textarea</h6>
+        <div class="row">
+          <div class="col">
+            <textarea></textarea>
+          </div>
+          <div class="col">
+            <pre><code>&lt;textarea/> </code></pre>
+          </div>
+        </div>
+        <h6 class="subtitle">Input Types</h6>
+        <div class="row">
+          <div class="col">
+            <input type="text" />
+          </div>
+          <div class="col">
+            <pre><code>&lt;input type="text"> </code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="palette-item" id="utils">
+        <h3 class="caps title">Utilities</h3>
+        <p>Classes to help you out</p>
+        <h6 class="subtitle">All utilities</h6>
+        <ul>
+          <li><code>.rounded</code> Rounds the element</li>
+          <li>
+            <code>.center</code> Vertical and horizontal centering of children
+            elements
+          </li>
+          <li><code>.text-center</code> Centered text alignment</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
